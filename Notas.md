@@ -31,6 +31,9 @@ db.<Nombre-collection>
 Crear una coleccion
 db.createCollection('name');
 
+## Operaciones con documentos
+
+### Altas (Agregar)
 - Insertar un documento  
 db.mongodb.insert({ejemplo: "cassandra"}) 
 
@@ -48,6 +51,8 @@ db.system.indexes.find()
 - Consultar los datos  
 db.mongodb.find({ejemplo: "mongodb"})  
 
+### Bajas (Borrar)
+db.ho2.remove({b:2})
 
 Desde la version 3
 en el sheel se puede asignar un documento a una variable.
@@ -68,7 +73,7 @@ db.personas.find({Edad : {$gte: 25}}).pretty()
 además indicando los campos que no quiero que se muestren.
 db.personas.find({Edad : {$gte: 25}},{_id: 0})
 
-## Modificar los datos de un documento.
+## Modificaciones 
 
 ### Una situacion
 - Actulizar una colección
