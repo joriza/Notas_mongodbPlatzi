@@ -11,7 +11,7 @@ subquieries
 docker run -d -p 27017:27017 --name mydatabase mongo:4.2
 
 ### Ingresar al contenedor
-    docker exec -it mydatabase bash
+docker exec -it mydatabase bash
 
 ### Dockerfile
 Sirver para crear un contenedor a partir de una imagen
@@ -169,11 +169,15 @@ Inner Join con MongoDB
 https://www.youtube.com/watch?v=N3ny7bvS_IM
 
 
+### Consultas de un test de UDT
+db.ho.find({},{_id: 0, SetupQueries: 0}) // Sin SetupQueries
+db.ho.find({},{_id: 0, "TestCases": 1}) // Solo los test Cases
+db.ho.find({},{_id: 0, "TestCases.Input": 1}) // Solo los campos input
+db.ho.find({},{_id: 0, "TestCases.Input.Input": 1}) // Solo las frases
 
+### Tipo dbxsql para mongodb
+La version de Linux se ejecuta sin instalar, solo se descomprime.
+www.robomongo.org
+cd /home/javier/Descargas/temp/robo3t-1.4.3-linux-x86_64-48f7dfd/bin/
 
-
-
-248dffcf-445d-47ee-8382-65bec1196879 
-
-db.temp.find({Edad : 55},{Datos : 0, Identificaciones: 0})
 
